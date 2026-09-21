@@ -178,17 +178,19 @@ An ID provided by Microsoft that allows games to access various cloud services.
 
 MicrosoftGame.config contains the package name, publisher, version, and SCID.
 
+SCID is usually not mentioned in MicrosoftGame.config in XGameSave api games, zero extend the hex xbox titleid to a guid for common pc gdk configurations if none is known.
+
 #### x-xbl-lock-ext
 
 Unknown field, not required for blob download.
 
 #### x-xbl-pfn
 
-Required for `GET /savedgames/<containerName>` and works for `GET /` without any
+Required to match package of scid, otherwise access is rejected.
 
 #### MS-CV
 
-Optional
+Optional.
 
 #### Authorization
 
