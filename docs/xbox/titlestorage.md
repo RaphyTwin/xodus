@@ -177,3 +177,19 @@ Service Configuration ID
 An ID provided by Microsoft that allows games to access various cloud services.
 
 MicrosoftGame.config contains the package name, publisher, version, and SCID.
+
+#### x-xbl-lock-ext
+
+Unknown field, not required for blob download.
+
+#### x-xbl-pfn
+
+Required for `GET /savedgames/<containerName>` and works for `GET /` without any
+
+#### MS-CV
+
+Optional
+
+#### Authorization
+
+Required xsts with win10 device token and user attached, important is that the titleid claim must be absent.
