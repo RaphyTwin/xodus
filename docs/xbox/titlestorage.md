@@ -59,6 +59,8 @@ GET /
 }
 ```
 
+Returns 404 if the game has never been saved with connectedstorage yet.
+
 ### Containers
 Get blob names in a container:
 ```
