@@ -59,6 +59,8 @@ GET /
 }
 ```
 
+Field clientFileTime is not part of the json if not set during upload.
+
 Returns 404 if the game has never been saved with connectedstorage yet.
 
 ### Containers
@@ -184,7 +186,7 @@ SCID is usually not mentioned in MicrosoftGame.config in XGameSave api games, ze
 
 #### x-xbl-lock-ext
 
-Unknown field, not required for blob download.
+Unknown field, not required for blob download. Required for upload, is missing create container returns conflict.
 
 #### x-xbl-pfn
 
